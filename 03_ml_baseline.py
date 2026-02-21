@@ -87,3 +87,102 @@ print(f"  R²:   {rf_val_r2:.4f}")
 # Save model
 joblib.dump(rf_model, 'random_forest.pkl')
 print("\n Model saved: 'random_forest.pkl'")
+
+# Model 2:XGBoost
+print("\n" + "=" * 50)
+print("Training Model 2: XGBoost")
+print("=" * 50)
+
+print("\nXGBoost uses gradient boosting with advanced regularization techniques...")
+xgb_model = xgb.XGBRegressor(
+    n_estimators=100,        # Number of boosting rounds
+    max_depth=10,            # Maximum tree depth
+    learning_rate=0.1,       # Step size shrinkage
+    subsample=0.8,           # Fraction of samples per tree
+    colsample_bytree=0.8,    # Fraction of features per tree
+    random_state=42,
+    n_jobs=-1
+)
+
+xgb_model.fit(
+    X_train, y_train,
+    eval_set=[(X_train, y_train), (X_val, y_val)],
+    verbose=False
+)
+
+# Predictions
+xgb_train_pred = xgb_model.predict(X_train)
+xgb_val_pred = xgb_model.predict(X_val)
+
+# Metrics
+xgb_train_rmse = np.sqrt(mean_squared_error(y_train, xgb_train_pred))
+xgb_train_mae = mean_absolute_error(y_train, xgb_train_pred)
+xgb_train_r2 = r2_score(y_train, xgb_train_pred)
+
+xgb_val_rmse = np.sqrt(mean_squared_error(y_val, xgb_val_pred))
+xgb_val_mae = mean_absolute_error(y_val, xgb_val_pred)
+xgb_val_r2 = r2_score(y_val, xgb_val_pred)
+
+print(f"\n XGBoost Results:")
+print(f"\nTraining Set:")
+print(f"  RMSE: {xgb_train_rmse:.2f} cycles")
+print(f"  MAE:  {xgb_train_mae:.2f} cycles")
+print(f"  R²:   {xgb_train_r2:.4f}")
+print(f"\nValidation Set:")
+print(f"  RMSE: {xgb_val_rmse:.2f} cycles")
+print(f"  MAE:  {xgb_val_mae:.2f} cycles")
+print(f"  R²:   {xgb_val_r2:.4f}")
+
+# Save model
+joblib.dump(xgb_model, 'xgboost.pkl')
+print("\n Model saved: 'xgboost.pkl'")
+
+# Model 3: LightGBM
+print("\n" + "=" * 50)
+print("Training Model 3: LightGBM")
+print("=" * 50)
+
+print("\nLightGBM is an efficient gradient boosting framework with fast training...")
+lgb_model = lgb.LGBMRegressor(
+    n_estimators=100,
+    max_depth=10,
+    learning_rate=0.1,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    random_state=42,
+    n_jobs=-1,
+    verbose=-1                # Suppress training logs
+)
+
+lgb_model.fit(
+    X_train, y_train,
+    eval_set=[(X_val, y_val)],
+    callbacks=[lgb.early_stopping(10), lgb.log_evaluation(0)]
+)
+
+# Predictions
+lgb_train_pred = lgb_model.predict(X_train)
+lgb_val_pred = lgb_model.predict(X_val)
+
+# Metrics
+lgb_train_rmse = np.sqrt(mean_squared_error(y_train, lgb_train_pred))
+lgb_train_mae = mean_absolute_error(y_train, lgb_train_pred)
+lgb_train_r2 = r2_score(y_train, lgb_train_pred)
+
+lgb_val_rmse = np.sqrt(mean_squared_error(y_val, lgb_val_pred))
+lgb_val_mae = mean_absolute_error(y_val, lgb_val_pred)
+lgb_val_r2 = r2_score(y_val, lgb_val_pred)
+
+print(f"\n LightGBM Results:")
+print(f"\nTraining Set:")
+print(f"  RMSE: {lgb_train_rmse:.2f} cycles")
+print(f"  MAE:  {lgb_train_mae:.2f} cycles")
+print(f"  R²:   {lgb_train_r2:.4f}")
+print(f"\nValidation Set:")
+print(f"  RMSE: {lgb_val_rmse:.2f} cycles")
+print(f"  MAE:  {lgb_val_mae:.2f} cycles")
+print(f"  R²:   {lgb_val_r2:.4f}")
+
+# Save model
+joblib.dump(lgb_model, 'lightgbm.pkl')
+print("\n Model saved: 'lightgbm.pkl'")
