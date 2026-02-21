@@ -123,3 +123,83 @@ Machine Learning Models (Traditional Approach)**
 └─────────────────────────────────────────────────────────────┘
 
 **Hyperparameter Tuning (Making Models Better)**
+
+**Installation & Setup**
+
+**Usage**
+
+**Use Trained Model for Predictions**
+
+**Results Summary
+Performance Comparison**
+
+
+**Project Structure**
+Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
+│
+├── 📁 data/                          # Dataset files
+│   ├── train_FD001.txt               # Raw training data (100 engines)
+│   ├── test_FD001.txt                # Raw test data (100 engines)
+│   ├── RUL_FD001.txt                 # Ground truth RUL values
+│   ├── train_processed.csv           # Cleaned & preprocessed data
+│   └── readme.txt                    # Dataset documentation
+│
+├── 📁 models/                        # Saved trained models
+│   ├── random_forest.pkl             # Random Forest model
+│   ├── xgboost.pkl                   # XGBoost model
+│   ├── lightgbm.pkl                  # LightGBM model
+│   ├── scaler.pkl                    # Feature scaler
+│   └── feature_columns.pkl           # Selected feature names
+│
+├── 📁 results/                       # Visualizations & evaluation results
+│   ├── FINAL_COMPREHENSIVE_COMPARISON.png
+│   ├── performance_improvement_chart.png
+│   ├── sensor_correlations.png
+│   └── other_visualizations.png
+│
+├── 📄 download_dataset.py            # Script to download NASA C-MAPSS data
+├── 📄 01_data_exploration.py         # Exploratory Data Analysis (EDA)
+├── 📄 02_data_preprocessing.py       # Data cleaning & feature engineering
+├── 📄 03_ml_baseline.py              # Baseline model training
+├── 📄 08_hyperparameter_tuning.py    # Model optimization
+├── 📄 09_final_comparison.py         # Final model comparison & evaluation
+│
+├── 📄 requirements.txt               # Required Python libraries
+└── 📄 README.md                      # Project documentation
+
+
+**Technical Details**
+**Metrics Explained Simply**
+
+**RMSE (Root Mean Square Error):** Average prediction error in cycles
+Lower is better
+Our best: 5.27 cycles (like being off by 1 day)
+
+**MAE (Mean Absolute Error):** Average difference between prediction and reality
+Lower is better
+Our best: 4.09 cycles
+
+**R² Score:** How much of the pattern does the model understand?
+0 = random guessing
+1 = perfect prediction
+Our best: 0.9915 (99.15% accurate!)
+
+**Real-World Impact**
+
+**References**
+
+**Dataset**
+Saxena, A., & Goebel, K. (2008). Turbofan Engine Degradation Simulation Data Set. NASA Ames Prognostics Data Repository.
+
+Link: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/
+
+**Research Papers**
+
+Saxena, A., Goebel, K., Simon, D., & Eklund, N. (2008). "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation", PHM Conference. 
+
+**Technologies Used**
+Machine Learning: Scikit-learn, XGBoost, LightGBM
+
+Data Processing: Pandas, NumPy
+
+Visualization: Matplotlib, Seaborn
