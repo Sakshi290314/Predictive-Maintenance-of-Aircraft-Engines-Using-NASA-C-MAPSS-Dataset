@@ -1,7 +1,9 @@
 **Predictive Maintenance on NASA C-MAPSS Engine Dataset**
+
 🔧 Predicting aircraft engine failures before they happen — using NASA's real-world turbofan sensor data and ensemble machine learning models (Random Forest, XGBoost, LightGBM) to estimate Remaining Useful Life (RUL) and trigger advance maintenance warnings.
 
 **Project workflow**
+
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                   Project Pipeline                                      │
 └─────────────────────────────────────────────────────────────────────────┘
@@ -25,6 +27,7 @@
    Model Comparison             Confusion Matrix             joblib/pickle
 
 **About the Dataset**
+
 This project uses the FD001 subset — one operating condition (Sea Level) and one fault type (HPC Degradation), making it the cleanest and most focused subset for building and evaluating machine learning models.
 
 **Dataset  :** FD001
@@ -34,9 +37,11 @@ This project uses the FD001 subset — one operating condition (Sea Level) and o
 **Records  : **20,631 total sensor readings
 
 **Understanding the Data**
+
 Think of 100 aircraft engines, each running continuously until it breaks down. Throughout their operation, 21 sensors attached to each engine constantly measure things like temperature, pressure, fan speed, and fuel flow. 
 
 Each row in the dataset represents one engine at one point in time:
+
 ┌───────────┬───────┬──────────────────┬──────────────────────────────┐
 │ Engine ID │ Cycle │  3 Op. Settings  │     21 Sensor Readings       │
 │           │       │ (Operating Mode) │ (Temp, Pressure, Speed...)   │
@@ -49,9 +54,11 @@ Each row in the dataset represents one engine at one point in time:
 100 engines × ~200 cycles each = 20,631 total records
 
 **what We Are Predicting**
+
 The goal is to predict the Remaining Useful Life (RUL) — how many operational cycles an engine has left before it fails.
 
 **Engine Life Timeline:**
+
 ├──────────────────────────────────────────────────┤
 Cycle 0                                      Cycle 192
 (Brand New)          Running →               (Failure)
