@@ -65,7 +65,7 @@ Step 4 — Correlation Analysis
 
 ![image alt](https://github.com/Sakshi290314/Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/blob/a28e036be877d5aec023e2c8cc1b12396af25a8e/results/sensor_correlations.png)
 
-Checked how strongly each remaining sensor relates to RUL. The graph above shows sensors with strong positive or negative correlation — these are the most important features for predicting engine failure.
+Checked how strongly each remaining sensor relates to RUL. 
 
 Step 5 — Normalize Features: All 14 sensors + 3 operational settings were scaled to 0–1 range using MinMaxScaler so no feature dominates due to its measurement unit.
 
@@ -138,6 +138,7 @@ Process:
 Among the machine learning models tested, XGBoost achieved the best results in terms of accuracy and error reduction.
 
 **Project Structure**
+
 <img width="598" height="522" alt="image" src="https://github.com/user-attachments/assets/ae7ad53f-67b2-40a6-b6fb-262c6b277d29" />
 <img width="610" height="503" alt="image" src="https://github.com/user-attachments/assets/98680d2c-1e64-47d4-86ce-5d02aed16465" />
 
