@@ -69,6 +69,8 @@ Kept    : 14 sensors out of 21
 
 Step 4 — Correlation Analysis
 
+![image alt](https://github.com/Sakshi290314/Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/blob/a28e036be877d5aec023e2c8cc1b12396af25a8e/results/sensor_correlations.png)
+
 Checked how strongly each remaining sensor relates to RUL. The graph above shows sensors with strong positive or negative correlation — these are the most important features for predicting engine failure.
 
 Step 5 — Normalize Features
@@ -80,6 +82,8 @@ Machine Learning Models (Traditional Approach)**
 <img width="524" height="315" alt="image" src="https://github.com/user-attachments/assets/6fe97cfb-b3ea-4df1-b781-1dfafa92d9da" />
 
 **Hyperparameter Tuning (Making Models Better)**
+
+![alt text](image-1.png)
 
 **Installation & Setup**
 
