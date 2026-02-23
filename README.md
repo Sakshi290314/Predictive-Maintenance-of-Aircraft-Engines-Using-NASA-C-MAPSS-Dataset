@@ -1,6 +1,6 @@
 **Predictive Maintenance on NASA C-MAPSS Engine Dataset**
 
-🔧 Predicting aircraft engine failures before they happen — using NASA's real-world turbofan sensor data and ensemble machine learning models (Random Forest, XGBoost, LightGBM) to estimate Remaining Useful Life (RUL) and trigger advance maintenance warnings.
+Predicting aircraft engine failures before they happen — using NASA's real-world turbofan sensor data and ensemble machine learning models (Random Forest, XGBoost, LightGBM) to estimate Remaining Useful Life (RUL) and trigger advance maintenance warnings.
 
 **Project workflow**
 
@@ -81,9 +81,31 @@ All 14 sensors + 3 operational settings were scaled to 0–1 range using MinMaxS
 Machine Learning Models (Traditional Approach)**
 <img width="524" height="315" alt="image" src="https://github.com/user-attachments/assets/6fe97cfb-b3ea-4df1-b781-1dfafa92d9da" />
 
-**Hyperparameter Tuning (Making Models Better)**
+**Feature Importance Analysis:**
 
-![alt text](image-1.png)
+<img width="1274" height="691" alt="image" src="https://github.com/user-attachments/assets/536f66c2-0d1b-4a83-a914-c5b4e110d2e1" />
+
+Shows which sensors matter most for predictions. Temperature and pressure sensors are key.
+
+**Machine Learning Predictions:**
+
+<img width="1856" height="508" alt="image" src="https://github.com/user-attachments/assets/34256a3f-a608-4ff4-a3b3-7898fb84a626" />
+
+Comparison of Random Forest, XGBoost, and LightGBM predictions vs actual RUL values.
+
+**Hyperparameter Tuning**
+
+Think of it like tuning a recipe:
+
+Too much salt = bad
+
+Too little salt = bland
+
+Just right = perfect!
+
+Similarly, models have "settings" we can adjust:
+
+<img width="591" height="130" alt="image" src="https://github.com/user-attachments/assets/5f2133f4-bd20-42a2-98dd-33d88b5b1269" />
 
 **Installation & Setup**
 
@@ -93,7 +115,19 @@ Machine Learning Models (Traditional Approach)**
 
 **Results Summary
 Performance Comparison**
+<img width="1308" height="507" alt="image" src="https://github.com/user-attachments/assets/4a12d3c3-4418-4720-b78d-e6217df0315d" />
 
+**Visual Performance Comparison**
+
+**Comprehensive Model Comparison:****
+
+<img width="1692" height="958" alt="image" src="https://github.com/user-attachments/assets/eed86c87-9ecc-4ae8-bbcb-95617cf51739" />
+
+**Performance Improvement Chart:**
+
+<img width="1751" height="777" alt="image" src="https://github.com/user-attachments/assets/ff14fcb9-065a-4784-95fc-ac0b61f4cb94" />
+
+Among the machine learning models tested, XGBoost achieved the best results in terms of accuracy and error reduction.
 
 **Project Structure**
 Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
