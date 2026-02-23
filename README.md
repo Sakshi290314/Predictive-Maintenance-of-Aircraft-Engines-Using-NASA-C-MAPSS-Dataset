@@ -123,7 +123,7 @@ Process:
 
 **Performance Comparison**
 
-<img width="1308" height="507" alt="image" src="https://github.com/user-attachments/assets/4a12d3c3-4418-4720-b78d-e6217df0315d" />
+<img width="614" height="228" alt="image" src="https://github.com/user-attachments/assets/cebe5586-63ab-43db-9a7e-55eb0600cc72" />
 
 **Visual Performance Comparison**
 
