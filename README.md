@@ -142,49 +142,6 @@ Among the machine learning models tested, XGBoost achieved the best results in t
 <img width="598" height="522" alt="image" src="https://github.com/user-attachments/assets/ae7ad53f-67b2-40a6-b6fb-262c6b277d29" />
 <img width="610" height="503" alt="image" src="https://github.com/user-attachments/assets/98680d2c-1e64-47d4-86ce-5d02aed16465" />
 
-
-Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
-│
-├── 📂 data/
-│   ├── RUL_FD001.txt                  # Ground truth RUL values
-│   ├── readme.txt                     # Dataset description
-│   ├── test_FD001.txt                 # Test set (raw)
-│   ├── train_FD001.txt                # Training set (raw)
-│   └── train_processed.csv            # Preprocessed training data
-│
-├── 📂 models/
-│   ├── best_hyperparameters.json      # Best params from tuning
-│   ├── feature_columns.pkl            # Selected feature list
-│   ├── hyperparameter_tuning_results. # Full tuning logs
-│   ├── lightgbm.pkl                   # LightGBM (original)
-│   ├── lightgbm_tuned.pkl             # LightGBM (tuned)
-│   ├── random_forest.pkl              # Random Forest (original)
-│   ├── random_forest_tuned.pkl        # Random Forest (tuned)
-│   ├── scaler.pkl                     # Feature scaler
-│   ├── xgboost.pkl                    # XGBoost (original)
-│   └── xgboost_tuned.pkl              # XGBoost (tuned)
-│
-├── 📂 results/
-│   ├── FINAL_ML_COMPARISON_TABLE.csv  # Full metrics comparison
-│   ├── ML_DASHBOARD.png               # 6-panel performance dashboard
-│   ├── ML_IMPROVEMENT_CHART.png       # Improvement over baseline chart
-│   ├── ML_RANKING_TABLE.png           # Model ranking table
-│   ├── engine_degradation.png         # Engine degradation visualization
-│   ├── feature_importance.png         # Feature importance plot
-│   ├── ml_predictions.png             # Predicted vs actual RUL
-│   ├── model_comparison.csv           # Model comparison summary
-│   └── sensor_correlations.png        # Sensor correlation heatmap
-│
-├── 01_data_exploration.py             # EDA & sensor analysis
-├── 02_data_preprocessing.py          # Feature engineering & scaling
-├── 03_ml_baseline.py                 # Baseline ML model training
-├── 04_hyperparameter_tuning.py       # GridSearch / tuning
-├── 05_final_comparison.py            # Final evaluation & plots
-│
-├── LICENSE
-├── README.md
-└── requirements.txt
-
 **Technical Details**
 
 **Metrics Explained Simply**
