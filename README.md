@@ -42,7 +42,7 @@ Before building any model, the raw sensor data was explored to understand how en
 **Sensor Degradation Plot**
 The plot below shows sensor readings for 4 different engines over their full lifetime. Each line represents one sensor tracked from the first cycle until engine failure.
 
-![image alt](https://github.com/Sakshi290314/Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS Dataset/blob/851f2e246336fd2b25b18d396ed2f71b12e0cc81 / results/engine_degradation.png)
+![image alt](https://github.com/Sakshi290314/Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS Dataset/blob/851f2e246336fd2b25b18d396ed2f71b12e0cc81/results/engine_degradation.png)
 
 Shows how sensor readings change as engines approach failure. Clear degradation patterns visible.
 
