@@ -153,9 +153,8 @@ Process:
                → Pick the best performing one
                → Improves accuracy by 2-5%
 
-<img width="591" height="130" alt="image" src="https://github.com/user-attachments/assets/5f2133f4-bd20-42a2-98dd-33d88b5b1269" />]
-
 **Use Trained Model for Predictions**
+<img width="729" height="569" alt="image" src="https://github.com/user-attachments/assets/fad1792e-bab3-4da6-b5e6-ff7a89aa6871" />
 
 **Results Summary**
 
@@ -164,7 +163,7 @@ Performance Comparison**
 
 **Visual Performance Comparison**
 
-**Comprehensive Model Comparison:****
+**Comprehensive Model Comparison:**
 
 <img width="1692" height="958" alt="image" src="https://github.com/user-attachments/assets/eed86c87-9ecc-4ae8-bbcb-95617cf51739" />
 
@@ -175,9 +174,6 @@ Performance Comparison**
 Among the machine learning models tested, XGBoost achieved the best results in terms of accuracy and error reduction.
 
 **Project Structure**
-<img width="631" height="522" alt="image" src="https://github.com/user-attachments/assets/bbed9b53-278e-4c4e-a9f3-e53e50412498" />
-<img width="632" height="498" alt="image" src="https://github.com/user-attachments/assets/73f58d66-4af0-4d54-af61-9520fc538398" />
-
 
 Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 │
@@ -257,7 +253,7 @@ Link: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/
 
 **Research Papers**
 
-Saxena, A., Goebel, K., Simon, D., & Eklund, N. (2008). "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation", PHM Conference. 
+Saxena, A., Goebel, K., Simon, D., & Eklund, N. (2008). "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation", PHM Conference.
 
 **Technologies Used**
 
