@@ -98,15 +98,67 @@ Just right = perfect!
 
 Similarly, models have "settings" we can adjust:
 
-<img width="591" height="130" alt="image" src="https://github.com/user-attachments/assets/5f2133f4-bd20-42a2-98dd-33d88b5b1269" />
+## ⚙️ Hyperparameter Tuning
 
-**Installation & Setup**
+```
+XGBoost & LightGBM Model Parameters We Tuned:
+-----------------------------------------------------------------
+| 1. Number of Trees (n_estimators)                             |
+|       Tried: 50 to 100                                        |
+|       Like: How many expert opinions to combine               |
+|                                                               |
+| 2. Tree Depth (max_depth)                                     |
+|       Tried: 5 to 15                                          |
+|       Like: How many questions each tree can ask              |
+|                                                               |
+| 3. Learning Rate                                              |
+|       Tried: 0.01 to 0.2                                      |
+|       Like: How fast the model learns (slow = careful)        |
+|                                                               |
+| 4. Feature Sampling (colsample_bytree)                        |
+|       Tried: 0.6 to 1.0                                       |
+|       Like: What % of sensors to look at each time            |
+-----------------------------------------------------------------
 
-**Usage**
+Process:
+  Random Search → Try 20 different combinations
+               → Pick the best performing one
+               → Improves accuracy by 2-5%
+
+Random Forest Model Parameters We Tuned
+-----------------------------------------------------------------
+| 1. Number of Trees (n_estimators)                             |
+|       Tried: 300 to 800                                       |
+|       Like: How many expert opinions to combine               |
+|                                                               |
+| 2. Tree Depth (max_depth)                                     |
+|       Tried: 8 to 25                                          |
+|       Like: How many questions each tree can ask              |
+|                                                               |
+| 3. Minimum Split Size (min_samples_split)                     |
+|       Tried: 2 to 10                                          |
+|       Like: Min data points needed to split a branch          |
+|                                                               |
+| 4. Minimum Leaf Size (min_samples_leaf)                       |
+|       Tried: 1 to 5                                           |
+|       Like: Min data points required at each leaf node        |
+|                                                               |
+| 5. Feature Selection (max_features)                           |
+|       Tried: sqrt, log2, None (all features)                  |
+|       Like: How many sensors to consider at each split        |
+-----------------------------------------------------------------
+
+Process:
+  Random Search → Try 20 different combinations
+               → Pick the best performing one
+               → Improves accuracy by 2-5%
+
+<img width="591" height="130" alt="image" src="https://github.com/user-attachments/assets/5f2133f4-bd20-42a2-98dd-33d88b5b1269" />]
 
 **Use Trained Model for Predictions**
 
-**Results Summary
+**Results Summary**
+
 Performance Comparison**
 <img width="1308" height="507" alt="image" src="https://github.com/user-attachments/assets/4a12d3c3-4418-4720-b78d-e6217df0315d" />
 
@@ -125,38 +177,46 @@ Among the machine learning models tested, XGBoost achieved the best results in t
 **Project Structure**
 Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 │
-├── 📁 data/                          # Dataset files
-│   ├── train_FD001.txt               # Raw training data (100 engines)
-│   ├── test_FD001.txt                # Raw test data (100 engines)
-│   ├── RUL_FD001.txt                 # Ground truth RUL values
-│   ├── train_processed.csv           # Cleaned & preprocessed data
-│   └── readme.txt                    # Dataset documentation
+├── 📂 data/
+│   ├── RUL_FD001.txt                  # Ground truth RUL values
+│   ├── readme.txt                     # Dataset description
+│   ├── test_FD001.txt                 # Test set (raw)
+│   ├── train_FD001.txt                # Training set (raw)
+│   └── train_processed.csv            # Preprocessed training data
 │
-├── 📁 models/                        # Saved trained models
-│   ├── random_forest.pkl             # Random Forest model
-│   ├── xgboost.pkl                   # XGBoost model
-│   ├── lightgbm.pkl                  # LightGBM model
-│   ├── scaler.pkl                    # Feature scaler
-│   └── feature_columns.pkl           # Selected feature names
+├── 📂 models/
+│   ├── best_hyperparameters.json      # Best params from tuning
+│   ├── feature_columns.pkl            # Selected feature list
+│   ├── hyperparameter_tuning_results. # Full tuning logs
+│   ├── lightgbm.pkl                   # LightGBM (original)
+│   ├── lightgbm_tuned.pkl             # LightGBM (tuned)
+│   ├── scaler.pkl                     # Feature scaler
+│   ├── xgboost.pkl                    # XGBoost (original)
+│   └── xgboost_tuned.pkl              # XGBoost (tuned)
 │
-├── 📁 results/                       # Visualizations & evaluation results
-│   ├── FINAL_COMPREHENSIVE_COMPARISON.png
-│   ├── performance_improvement_chart.png
-│   ├── sensor_correlations.png
-│   └── other_visualizations.png
+├── 📂 results/
+│   ├── FINAL_ML_COMPARISON_TABLE.csv  # Full metrics comparison
+│   ├── ML_DASHBOARD.png               # 6-panel performance dashboard
+│   ├── ML_IMPROVEMENT_CHART.png       # Improvement over baseline chart
+│   ├── ML_RANKING_TABLE.png           # Model ranking table
+│   ├── engine_degradation.png         # Engine degradation visualization
+│   ├── feature_importance.png         # Feature importance plot
+│   ├── ml_predictions.png             # Predicted vs actual RUL
+│   ├── model_comparison.csv           # Model comparison summary
+│   └── sensor_correlations.png        # Sensor correlation heatmap
 │
-├── 📄 download_dataset.py            # Script to download NASA C-MAPSS data
-├── 📄 01_data_exploration.py         # Exploratory Data Analysis (EDA)
-├── 📄 02_data_preprocessing.py       # Data cleaning & feature engineering
-├── 📄 03_ml_baseline.py              # Baseline model training
-├── 📄 08_hyperparameter_tuning.py    # Model optimization
-├── 📄 09_final_comparison.py         # Final model comparison & evaluation
+├── 01_data_exploration.py             # EDA & sensor analysis
+├── 02_data_preprocessing.py          # Feature engineering & scaling
+├── 03_ml_baseline.py                 # Baseline ML model training
+├── 04_hyperparameter_tuning.py       # GridSearch / tuning
+├── 05_final_comparison.py            # Final evaluation & plots
 │
-├── 📄 requirements.txt               # Required Python libraries
-└── 📄 README.md                      # Project documentation
-
+├── LICENSE
+├── README.md
+└── requirements.txte
 
 **Technical Details**
+
 **Metrics Explained Simply**
 
 **RMSE (Root Mean Square Error):** Average prediction error in cycles
