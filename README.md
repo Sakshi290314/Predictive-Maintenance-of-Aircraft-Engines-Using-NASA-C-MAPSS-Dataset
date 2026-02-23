@@ -72,6 +72,7 @@ Step 5 — Normalize Features: All 14 sensors + 3 operational settings were scal
 **Models Overview**
 
 **Machine Learning Models**
+
 <img width="524" height="315" alt="image" src="https://github.com/user-attachments/assets/6fe97cfb-b3ea-4df1-b781-1dfafa92d9da" />
 
 **Feature Importance Analysis:**
