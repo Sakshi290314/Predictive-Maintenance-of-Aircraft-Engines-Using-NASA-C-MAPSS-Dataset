@@ -115,11 +115,13 @@ Process:
                → Improves accuracy by 2-5%
 
 **Use Trained Model for Predictions**
+
 <img width="729" height="569" alt="image" src="https://github.com/user-attachments/assets/fad1792e-bab3-4da6-b5e6-ff7a89aa6871" />
 
 **Results Summary**
 
-Performance Comparison**
+**Performance Comparison**
+
 <img width="1308" height="507" alt="image" src="https://github.com/user-attachments/assets/4a12d3c3-4418-4720-b78d-e6217df0315d" />
 
 **Visual Performance Comparison**
