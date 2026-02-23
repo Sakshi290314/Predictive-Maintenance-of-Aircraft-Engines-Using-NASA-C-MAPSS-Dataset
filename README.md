@@ -100,52 +100,14 @@ Similarly, models have "settings" we can adjust:
 
 ## ⚙️ Hyperparameter Tuning
 
-XGBoost & LightGBM Model Parameters We Tuned:
------------------------------------------------------------------
-| 1. Number of Trees (n_estimators)                             |
-|       Tried: 50 to 100                                        |
-|       Like: How many expert opinions to combine               |
-|                                                               |
-| 2. Tree Depth (max_depth)                                     |
-|       Tried: 5 to 15                                          |
-|       Like: How many questions each tree can ask              |
-|                                                               |
-| 3. Learning Rate                                              |
-|       Tried: 0.01 to 0.2                                      |
-|       Like: How fast the model learns (slow = careful)        |
-|                                                               |
-| 4. Feature Sampling (colsample_bytree)                        |
-|       Tried: 0.6 to 1.0                                       |
-|       Like: What % of sensors to look at each time            |
------------------------------------------------------------------
+<img width="543" height="446" alt="image" src="https://github.com/user-attachments/assets/7c3c19b5-d31f-41dd-9cc0-49407ae7cbb2" />
 
 Process:
   Random Search → Try 20 different combinations
                → Pick the best performing one
                → Improves accuracy by 2-5%
 
-Random Forest Model Parameters We Tuned
------------------------------------------------------------------
-| 1. Number of Trees (n_estimators)                             |
-|       Tried: 300 to 800                                       |
-|       Like: How many expert opinions to combine               |
-|                                                               |
-| 2. Tree Depth (max_depth)                                     |
-|       Tried: 8 to 25                                          |
-|       Like: How many questions each tree can ask              |
-|                                                               |
-| 3. Minimum Split Size (min_samples_split)                     |
-|       Tried: 2 to 10                                          |
-|       Like: Min data points needed to split a branch          |
-|                                                               |
-| 4. Minimum Leaf Size (min_samples_leaf)                       |
-|       Tried: 1 to 5                                           |
-|       Like: Min data points required at each leaf node        |
-|                                                               |
-| 5. Feature Selection (max_features)                           |
-|       Tried: sqrt, log2, None (all features)                  |
-|       Like: How many sensors to consider at each split        |
------------------------------------------------------------------
+<img width="543" height="541" alt="image" src="https://github.com/user-attachments/assets/d8df8127-5a6e-4868-9d9f-50cd05ef7fd4" />
 
 Process:
   Random Search → Try 20 different combinations
@@ -173,6 +135,9 @@ Performance Comparison**
 Among the machine learning models tested, XGBoost achieved the best results in terms of accuracy and error reduction.
 
 **Project Structure**
+<img width="598" height="522" alt="image" src="https://github.com/user-attachments/assets/ae7ad53f-67b2-40a6-b6fb-262c6b277d29" />
+<img width="610" height="503" alt="image" src="https://github.com/user-attachments/assets/98680d2c-1e64-47d4-86ce-5d02aed16465" />
+
 
 Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 │
