@@ -43,6 +43,7 @@ Before building any model, the raw sensor data was explored to understand how en
 The plot below shows sensor readings for 4 different engines over their full lifetime. Each line represents one sensor tracked from the first cycle until engine failure.
 
 
+
 Shows how sensor readings change as engines approach failure. Clear degradation patterns visible.
 
 **Phase 2 — Data Preprocessing**
@@ -67,19 +68,7 @@ All 14 sensors + 3 operational settings were scaled to 0–1 range using MinMaxS
 
 **Models Overview (Simple Explanation)
 Machine Learning Models (Traditional Approach)**
-┌─────────────────────────────────────────────────────────────┐
-│  1. Random Forest                                           │
-│     Think: 100 decision trees voting together               │
-│     Result: RMSE = 41.37 cycles                             │
-├─────────────────────────────────────────────────────────────┤
-│  2. XGBoost                                                 │
-│     Think: Smart sequential tree building                   │
-│     Result: RMSE = 42.11 cycles                             │
-├─────────────────────────────────────────────────────────────┤
-│  3. LightGBM                                                │
-│     Think: Faster version of XGBoost                        │
-│     Result: RMSE = 41.18 cycles (Best ML Model)             │
-└─────────────────────────────────────────────────────────────┘
+<img width="524" height="315" alt="image" src="https://github.com/user-attachments/assets/6fe97cfb-b3ea-4df1-b781-1dfafa92d9da" />
 
 **Hyperparameter Tuning (Making Models Better)**
 
@@ -131,16 +120,23 @@ Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 **Metrics Explained Simply**
 
 **RMSE (Root Mean Square Error):** Average prediction error in cycles
+
 Lower is better
+
 Our best: 5.27 cycles (like being off by 1 day)
 
 **MAE (Mean Absolute Error):** Average difference between prediction and reality
+
 Lower is better
+
 Our best: 4.09 cycles
 
 **R² Score:** How much of the pattern does the model understand?
+
 0 = random guessing
+
 1 = perfect prediction
+
 Our best: 0.9915 (99.15% accurate!)
 
 **Real-World Impact**
@@ -148,6 +144,7 @@ Our best: 0.9915 (99.15% accurate!)
 **References**
 
 **Dataset**
+
 Saxena, A., & Goebel, K. (2008). Turbofan Engine Degradation Simulation Data Set. NASA Ames Prognostics Data Repository.
 
 Link: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/
@@ -157,6 +154,7 @@ Link: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/
 Saxena, A., Goebel, K., Simon, D., & Eklund, N. (2008). "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation", PHM Conference. 
 
 **Technologies Used**
+
 Machine Learning: Scikit-learn, XGBoost, LightGBM
 
 Data Processing: Pandas, NumPy
