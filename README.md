@@ -3,28 +3,27 @@
 🔧 Predicting aircraft engine failures before they happen — using NASA's real-world turbofan sensor data and ensemble machine learning models (Random Forest, XGBoost, LightGBM) to estimate Remaining Useful Life (RUL) and trigger advance maintenance warnings.
 
 **Project workflow**
+<img width="655" height="504" alt="image" src="https://github.com/user-attachments/assets/e2ecaf0d-2ef8-4b60-9897-a5774e1d213a" />
 
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                   Project Pipeline                                      │
 └─────────────────────────────────────────────────────────────────────────┘
 
    📊 RAW DATA                  🔧 PREPROCESSING            🤖 ML MODELS
-   ────────────                   ───────────────              ────────────
-
+   ────────────                   ───────────────             ────────────
    NASA C-MAPSS          →      Clean & Transform      →     Train 3 Models
    Dataset                      Drop constant sensors        Random Forest
    100 Engines                  Normalize (MinMaxScaler)     XGBoost
    21 Sensors                   Create RUL column            LightGBM
    20,631 Records               Clip RUL at 125 cycles
                                                                   ↓
-
-   📈 EVALUATION                  🏆 BEST MODEL               💾 OUTPUT
+                                                                  
+   📈 EVALUATION                🏆 BEST MODEL               💾 OUTPUT
    ─────────────                 ─────────────               ──────────
-
-   RMSE Comparison       →     Best ML Model          →     Predict RUL
-   R² Score                    Cross Validation             Early Warning
+   RMSE Comparison       →      Best ML Model          →     Predict RUL
+   R² Score                     Cross Validation             Early Warning
    Residual Plots               Feature Importance           Save Model
-   Model Comparison             Confusion Matrix             joblib/pickle
+   Model Comparison                                          joblib/pickle
 
 **About the Dataset**
 
