@@ -28,7 +28,7 @@ Each row in the dataset represents one engine at one point in time:
 
 <img width="635" height="261" alt="image" src="https://github.com/user-attachments/assets/87d08536-10bb-4b21-ac22-e45e38f51c1f" />
 
-**what We Are Predicting**
+**What We Are Predicting**
 
 The goal is to predict the Remaining Useful Life (RUL) — how many operational cycles an engine has left before it fails.
 
@@ -49,19 +49,13 @@ Shows how sensor readings change as engines approach failure. Clear degradation 
 **Phase 2 — Data Preprocessing**
 Step 1 — Load Raw Data
 
-Loaded train_FD001.txt with proper column names and removed empty columns caused by trailing spaces.
-
-Step 2 — Calculate RUL
-
-Created the target variable that the model will predict.
+Step 2 — Calculate RUL: Created the target variable that the model will predict.
 
 RUL = Max Cycle of Engine − Current Cycle
 
 Engine 1 at Cycle 50 → RUL = 192 - 50 = 142 cycles left
 
-Step 3 — Remove Useless Sensors
-
-Sensors that never change were dropped since they add no value to the model.
+Step 3 — Remove Useless Sensors: Sensors that never change were dropped since they add no value to the model.
 
 Removed : sensor_1, sensor_5, sensor_6, sensor_10, sensor_16, sensor_18, sensor_19
 
@@ -73,12 +67,11 @@ Step 4 — Correlation Analysis
 
 Checked how strongly each remaining sensor relates to RUL. The graph above shows sensors with strong positive or negative correlation — these are the most important features for predicting engine failure.
 
-Step 5 — Normalize Features
+Step 5 — Normalize Features: All 14 sensors + 3 operational settings were scaled to 0–1 range using MinMaxScaler so no feature dominates due to its measurement unit.
 
-All 14 sensors + 3 operational settings were scaled to 0–1 range using MinMaxScaler so no feature dominates due to its measurement unit.
+**Models Overview**
 
-**Models Overview (Simple Explanation)
-Machine Learning Models (Traditional Approach)**
+**Machine Learning Models**
 <img width="524" height="315" alt="image" src="https://github.com/user-attachments/assets/6fe97cfb-b3ea-4df1-b781-1dfafa92d9da" />
 
 **Feature Importance Analysis:**
