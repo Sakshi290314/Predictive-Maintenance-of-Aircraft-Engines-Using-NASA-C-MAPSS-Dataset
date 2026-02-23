@@ -100,7 +100,6 @@ Similarly, models have "settings" we can adjust:
 
 ## ⚙️ Hyperparameter Tuning
 
-```
 XGBoost & LightGBM Model Parameters We Tuned:
 -----------------------------------------------------------------
 | 1. Number of Trees (n_estimators)                             |
