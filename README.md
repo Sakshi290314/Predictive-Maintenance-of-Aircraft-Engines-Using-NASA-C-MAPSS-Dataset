@@ -175,6 +175,10 @@ Performance Comparison**
 Among the machine learning models tested, XGBoost achieved the best results in terms of accuracy and error reduction.
 
 **Project Structure**
+<img width="631" height="522" alt="image" src="https://github.com/user-attachments/assets/bbed9b53-278e-4c4e-a9f3-e53e50412498" />
+<img width="632" height="498" alt="image" src="https://github.com/user-attachments/assets/73f58d66-4af0-4d54-af61-9520fc538398" />
+
+
 Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 │
 ├── 📂 data/
@@ -190,6 +194,8 @@ Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 │   ├── hyperparameter_tuning_results. # Full tuning logs
 │   ├── lightgbm.pkl                   # LightGBM (original)
 │   ├── lightgbm_tuned.pkl             # LightGBM (tuned)
+│   ├── random_forest.pkl              # Random Forest (original)
+│   ├── random_forest_tuned.pkl        # Random Forest (tuned)
 │   ├── scaler.pkl                     # Feature scaler
 │   ├── xgboost.pkl                    # XGBoost (original)
 │   └── xgboost_tuned.pkl              # XGBoost (tuned)
@@ -213,7 +219,7 @@ Predictive-Maintenance-of-Aircraft-Engines-Using-NASA-C-MAPSS-Dataset/
 │
 ├── LICENSE
 ├── README.md
-└── requirements.txte
+└── requirements.txt
 
 **Technical Details**
 
