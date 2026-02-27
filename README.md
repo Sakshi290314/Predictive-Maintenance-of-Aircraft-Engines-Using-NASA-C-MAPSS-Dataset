@@ -77,7 +77,7 @@ Step 5 — Normalize Features: All 14 sensors + 3 operational settings were scal
 
 **Feature Importance Analysis:**
 
-<img width="1274" height="691" alt="image" src="https://github.com/user-attachments/assets/536f66c2-0d1b-4a83-a914-c5b4e110d2e1" />
+<img width="952" height="759" alt="image" src="https://github.com/user-attachments/assets/24b5a87c-5dca-4725-8fb5-9ef7a778f7a7" />
 
 Shows which sensors matter most for predictions. Temperature and pressure sensors are key.
 
